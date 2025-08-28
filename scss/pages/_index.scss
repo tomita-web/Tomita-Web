@@ -1,0 +1,914 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/breakpoint' as *;
+
+// -----------------------------------------
+// hero
+// -----------------------------------------
+.hero {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    width: 100%;
+    height: 100svh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    @include mq('md') {
+        padding-top: 150px;
+    }
+}
+
+.hero__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero__content {
+    background: rgba(#fff, $alpha: 0.8);
+    @include mq(lg) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.hero__title {
+    color: #222;
+    font-size: 28px;
+    line-height: 1.7;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    @include mq(md) {
+        font-size: 44px;
+    }
+    br {
+        @include mq(lg) {
+            display: none;
+        }
+    }
+}
+
+.hero__sub-title {
+    margin-top: 12px;
+    color: #444;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 600;
+    text-align: center;
+
+    @include mq(md) {
+        font-size: 40px;
+    }
+}
+
+.hero__description {
+    margin-top: 12px;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+
+    @include mq(md) {
+        font-size: 36px;
+    }
+}
+
+.hero__image {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+
+    @include mq(md) {
+        max-width: 400px;
+        margin-top: 20px;
+    }
+}
+
+.hero__button {
+    position: relative;
+    margin-top: 12px;
+    margin-bottom: 10px;
+
+    @include mq(md) {
+        margin-top: 32px;
+        margin-bottom: 0;
+    }
+
+    &::after {
+        position: absolute;
+        content: '＼まずはお気軽に！／';
+        top: -26px;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        transform: translateX(-50%);
+        font-weight: 600;
+        letter-spacing: 0.1em;
+
+        @include mq(md) {
+            top: -54px;
+            font-size: 28px;
+        }
+    }
+}
+
+// -----------------------------------------
+// news
+// -----------------------------------------
+.news {
+    background-color: $color-main2;
+    position: relative;
+    margin-bottom: 30px;
+    @include mq(md) {
+        margin-bottom: 50px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background: url('../img/wave\ \(1\).svg') repeat-x center center / contain;
+        transform: rotate(180deg);
+
+        @include mq(md) {
+            bottom: -50px;
+            height: 50px;
+            background: url('../img/wave-md.svg') repeat-x center center / contain;
+        }
+    }
+}
+
+.news__inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.news__title {
+}
+
+.news__content {
+    margin-top: 90px;
+    background: #fff;
+    padding: 20px 5% 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    @include mq(md) {
+        margin-top: 110px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -87px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        background: url('../img/logo-icon15いらっしゃいませ.png') no-repeat center center / contain;
+
+        @include mq(md) {
+            left: 85%;
+            top: -176px;
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+.news__list {
+}
+
+.news__item {
+}
+
+.news__link {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &:hover .news__item-title {
+        color: $color-main1;
+    }
+}
+
+.news__date {
+    font-size: 14px;
+    color: #666;
+
+    @include mq(md) {
+        font-size: 16px;
+    }
+}
+
+.news__item-title {
+    font-size: 14px;
+    color: $color-text;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+
+    @include mq(md) {
+        font-size: 18px;
+    }
+}
+
+.news__more {
+    margin-top: 16px;
+    text-align: right;
+}
+
+.news__more-link {
+    display: inline-block;
+    padding-bottom: 2px;
+    font-size: 14px;
+    color: $color-text;
+    border-bottom: 1px solid $color-main1;
+    transition: font-weight 0.3s border-width 0.3s;
+    color: $color-main1;
+
+    @include mq(md) {
+        font-size: 18px;
+    }
+
+    &:hover {
+        font-weight: 700;
+        border-width: 2px;
+    }
+}
+
+// -----------------------------------------
+// work
+// -----------------------------------------
+/* ========= 基本ユーティリティ ========= */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* ========= セクション枠 ========= */
+.works {
+    background: #fff;
+}
+
+.works__content {
+    margin-top: 60px;
+    padding: 0 20px;
+
+    @include mq(md) {
+        padding: 0;
+    }
+}
+
+/* ========= タブ ========= */
+.works__tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 4px;
+    margin-bottom: 24px;
+}
+
+.works__tab {
+    display: inline-block;
+    gap: 8px;
+    padding: 10px 16px;
+    width: 48%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.3;
+    background: #f5f7fb;
+    border: 1px solid #e5e8ef;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.works__tab:hover {
+    background: #eef2f7;
+    border-color: #d9dee7;
+}
+
+/* アクティブ表示（ラジオのcheckedに同期） */
+#tab-all:checked ~ .works__tabs label[for='tab-all'],
+#tab-wp:checked ~ .works__tabs label[for='tab-wp'],
+#tab-coding:checked ~ .works__tabs label[for='tab-coding'] {
+    color: #007acc;
+    background: #e9f4ff;
+    border-color: #bedeff;
+    box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.12) inset;
+}
+
+/* ========= グリッド ========= */
+.works__grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@include mq(md) {
+    .works__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@include mq(lg) {
+    .works__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ========= カード ========= */
+.work-card {
+    display: none; /* フィルター前提：まず隠す */
+}
+
+.work-card a {
+    display: block;
+    background: #fff;
+    border: 1px solid #e7ebf2;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(16, 24, 40, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.work-card a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+    border-color: #d9dee7;
+}
+
+/* クリップ用の箱 */
+.work-card__thumb {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 4px; /* a の角丸に合わせたい場合 */
+    background: #eee;
+    position: relative;
+}
+
+.work-card__pan {
+    height: 100%;
+    overflow: auto;
+    @include mq(md) {
+        overflow: hidden;
+    }
+}
+
+/* 画像：最初は上を見せる */
+.work-card__pan img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top center;
+    transform: translateY(0);
+    transition: transform 4s linear; /* ← ホバーでゆっくり動く */
+    will-change: transform;
+}
+
+/* ホバーで下側を見せる（＝画像を上にスライド） */
+@media (hover: hover) {
+    .work-card:hover .work-card__pan img,
+    .work-card a:hover .work-card__pan img {
+        transform: translateY(-87%); /* 画像に応じて -10%〜-25% を調整 */
+    }
+}
+
+/* モーション配慮 */
+@media (prefers-reduced-motion: reduce) {
+    .work-card__pan img {
+        transition: none;
+        transform: none;
+    }
+}
+@media (hover: none) {
+    .work-card__pan {
+        @include mq(md) {
+            overflow: auto; /* 指でスクロール可能に */
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+        }
+    }
+    .work-card__pan::-webkit-scrollbar {
+        @include mq(md) {
+            display: none;
+        }
+    } /* iOS/Chrome */
+
+    /* スマホでは “画像を大きく” して必ずはみ出させ、スクロール余地を作る */
+    .work-card__pan img {
+        @include mq(md) {
+            width: 100%;
+            height: auto; /* 自然比率で伸縮 */
+            min-height: 130%; /* ★ これで縦にオーバーフローを確保（調整OK） */
+            object-fit: contain; /* 画像の縦の情報を見せたいので contain に */
+            transform: none; /* ホバーのアニメは無効化 */
+            transition: none;
+        }
+    }
+
+    /* 上下に薄いグラデーションで “スクロールできそう” なヒント（任意） */
+    .work-card__thumb::before,
+    .work-card__thumb::after {
+        @include mq(md) {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 16px;
+            pointer-events: none;
+        }
+    }
+    .work-card__thumb::before {
+        @include mq(md) {
+            top: 0;
+            background: linear-gradient(#ffffff, rgba(255, 255, 255, 0));
+        }
+    }
+    .work-card__thumb::after {
+        @include mq(md) {
+            bottom: 0;
+            background: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
+        }
+    }
+}
+
+/* ========= フィルタ（CSSだけ） ========= */
+/* すべて */
+#tab-all:checked ~ .works__grid .work-card {
+    display: block;
+}
+/* WordPress */
+#tab-wp:checked ~ .works__grid .is-wp {
+    display: block;
+}
+/* HTMLコーディング */
+#tab-coding:checked ~ .works__grid .is-coding {
+    display: block;
+}
+
+.work-card__title {
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.work-card__company {
+    font-weight: 600;
+}
+
+.work-card__description {
+    margin-top: 6px;
+    color: #555;
+}
+
+.work-card__label {
+    font-weight: 600;
+    color: #007acc; // アクセントカラー
+    margin-right: 4px;
+}
+
+.work-card__text {
+}
+
+// -----------------------------------------
+// about
+// -----------------------------------------
+.about {
+    background: $color-main2;
+    padding-bottom: 0;
+
+    @include mq(md) {
+        padding-bottom: 80px;
+    }
+}
+
+.about__inner {
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 40px;
+
+    @include mq(md) {
+        margin-top: 60px;
+        flex-direction: row;
+        @include mq(md) {
+            margin-top: 80px;
+        }
+    }
+}
+
+.about__skills {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.skill:nth-child(1) {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -87px;
+        left: 70%;
+        width: 100px;
+        height: 100px;
+        background: url('../img/logo-icon12自転車.png') no-repeat center center / contain;
+        @include mq(md) {
+            top: -116px;
+            width: 120px;
+            height: 120px;
+            left: 0;
+        }
+    }
+}
+.about__skills-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-text;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    @include mq(md) {
+        font-size: 24px;
+        margin-bottom: 80px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 2px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        border-radius: 2px;
+        @include mq(md) {
+            width: 124px;
+            height: 3px;
+        }
+    }
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.skill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill__icon {
+    font-size: 1.8rem;
+    margin-right: 20px;
+    width: 40px;
+    text-align: center;
+    color: #667eea;
+    @include mq(md) {
+        font-size: 3rem;
+        width: 50px;
+    }
+}
+
+.skill--html .skill__icon {
+    color: #e34f26;
+}
+.skill--css .skill__icon {
+    color: #1572b6;
+}
+.skill--js .skill__icon {
+    color: #f7df1e;
+}
+.skill--wordpress .skill__icon {
+    color: #21759b;
+}
+.skill--git .skill__icon {
+    color: #f05032;
+}
+.skill--design .skill__icon {
+    color: #ff61f6;
+}
+.skill--delivery .skill__icon {
+    color: #28a745;
+}
+
+.skill__text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+
+    @include mq(md) {
+        font-size: 18px;
+    }
+}
+
+.about__profile {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 30px 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about__profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about__profile-avatar {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid $color-main1;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 122, 204, 0.3);
+    @include mq(md) {
+        // width: 250px;
+        // height: 350px;
+    }
+    img {
+        object-fit: contain;
+    }
+}
+
+.about__profile-title {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    @include mq(md) {
+        font-size: 24px;
+    }
+}
+
+.about__profile-story {
+    color: #6b7280;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+    @include mq(md) {
+        font-size: 20px;
+    }
+}
+
+.about__profile-story p {
+    margin-bottom: 20px;
+}
+
+.about__profile-story strong {
+    color: $color-main1;
+    font-weight: 600;
+}
+
+.about__button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+// -----------------------------------------
+// parallax
+// -----------------------------------------
+.parallax {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    @include mq(md) {
+        height: 600px;
+    }
+}
+
+.parallax__bg {
+    position: absolute;
+    inset: -200% 0;
+    width: 100%;
+    z-index: -1;
+    will-change: transform;
+
+    // 背景用レイヤーを擬似要素で作る
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('../img/works-bg.jpg') center/contain no-repeat;
+        opacity: 0.5; // ★背景だけ透過
+    }
+}
+.parallax__button {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '＼まずはお気軽に！／';
+        top: -26px;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        transform: translateX(-50%);
+        font-weight: 600;
+        letter-spacing: 0.1em;
+
+        @include mq(md) {
+            top: -54px;
+            font-size: 28px;
+        }
+    }
+}
+
+// -----------------------------------------
+// order-flow
+// -----------------------------------------
+/* ========== Config ========== */
+$text: #222;
+$muted: #6b7280; // gray-500-ish
+$border: #e5e7eb;
+
+.order-flow {
+    background-image: conic-gradient(
+        #f0f8ff 90deg,
+        transparent 90deg 180deg,
+        #f0f8ff 180deg 270deg,
+        transparent 270deg
+    );
+    background-size: 100px 100px;
+    background-color: #fff;
+    @include mq(md) {
+        background-size: 200px 200px;
+    }
+}
+
+.order-flow__steps {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    position: relative;
+    @include mq(md) {
+        margin-top: 80px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px;
+    }
+    @include mq(xl) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -87px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        background: url('../img/logo-icon10サングラス頭.png') no-repeat center center / contain;
+        @include mq(md) {
+            top: -130px;
+            width: 150px;
+            height: 150px;
+            left: 85%;
+        }
+    }
+}
+
+.order-flow__step {
+    position: relative;
+    background: #fff;
+    border: 1px solid $border;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: default;
+    @include mq(md) {
+        padding: 28px;
+    }
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
+        border-color: $color-main1;
+    }
+}
+
+.order-flow__step-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+    @include mq(sm) {
+        gap: 10px;
+    }
+}
+
+.order-flow__step-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: $color-accent1;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    @include mq(md) {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.order-flow__step-icon {
+    font-size: 24px;
+    line-height: 1;
+    color: #fff;
+    @include mq(md) {
+        font-size: 30px;
+    }
+}
+
+.order-flow__step-title {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $text;
+    letter-spacing: 0.01em;
+    border-bottom: 1px solid #eee;
+    span {
+        font-weight: 700;
+        font-size: 30px;
+        color: #666;
+        display: inline-block;
+        margin-right: 6px;
+    }
+    @include mq(md) {
+        font-size: 24px;
+        span {
+            font-size: 30px;
+        }
+    }
+}
+
+.order-flow__step-content {
+    font-size: 16px;
+    line-height: 1.9;
+    color: $muted;
+    @include mq(md) {
+        font-size: 20px;
+    }
+}
+
+/* 強調 */
+.order-flow__step-highlight {
+    color: #007acc;
+    font-weight: 700;
+}
+
+.order-flow__button {
+    text-align: center;
+    margin-top: 32px;
+    .button {
+        @include mq(md) {
+            margin-top: 40px;
+        }
+    }
+}

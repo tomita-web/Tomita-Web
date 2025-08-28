@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- OGP -->
+        <meta property="og:title" content="冨田ウェブのポートフォリオ" />
+        <meta property="og:description" content="デザインカンプからの正確なコーディングを提供します。" />
+        <meta property="og:image" content="https://asahi-0704.github.io/asahi-portforio/assets/img/ogp.png" />
+        <meta property="og:url" content="https://asahi-0704.github.io/asahi-portforio/" />
+        <meta property="og:type" content="website" />
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="冨田ウェブのポートフォリオ" />
+        <meta name="twitter:description" content="デザインカンプからの正確なコーディングを提供します。" />
+        <meta name="twitter:image" content="https://asahi-0704.github.io/asahi-portforio/assets/img/ogp.png" />
+        <title>冨田ウェブ | 愛知のWeb制作・コーディング | Tomita-Web</title>
+        <meta name="description" content="冨田ウェブ（Tomita-Web）は愛知を拠点にコーディング・Web制作を行っています。正確な再現性と丁寧な対応で安心してご依頼いただけます。">
+        <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+        <script src="https://kit.fontawesome.com/eb8946f2d3.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <header id="header" class="header">
+            <div class="header__inner">
+                <h1 class="header__logo">
+                    <a href="#top" class="header__logo-link">Tomita-Web</a>
+                </h1>
+                <nav class="header__nav" aria-label="ヘッダーメニュー">
+                    <ul class="header__menu">
+                        <li class="header__menu-item"><a href="#news">お知らせ</a></li>
+                        <li class="header__menu-item"><a href="#works">実績</a></li>
+                        <li class="header__menu-item"><a href="#about">私について</a></li>
+                        <li class="header__menu-item"><a href="#order-flow">ご依頼の流れ</a></li>
+                        <li class="header__menu-item"><a href="#contact">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <button id="js-drawer-icon" class="drawer-icon header__open" aria-label="メニューを開閉">
+                    <span class="drawer-icon__line"></span>
+                    <span class="drawer-icon__line"></span>
+                    <span class="drawer-icon__line"></span>
+                </button>
+            </div>
+        </header>
+        <div id="js-drawer-content" class="drawer-content">
+            <nav class="drawer-content__nav" aria-label="ドロワーメニュー">
+                <ul class="drawer-content__menu">
+                    <li class="drawer-content__item"><a href="#news">お知らせ</a></li>
+                    <li class="drawer-content__item"><a href="#works">実績紹介</a></li>
+                    <li class="drawer-content__item"><a href="#about">私について</a></li>
+                    <li class="drawer-content__item"><a href="#order-flow">ご依頼の流れ</a></li>
+                    <li class="drawer-content__item"><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main class="main">
+            <div id="hero" class="hero">
+                <video class="hero__bg" autoplay muted loop playsinline>
+                    <source src="./assets/img/morningsun01.mp4" type="video/mp4" />
+                </video>
+                <div class="hero__inner inner">
+                    <div class="hero__content">
+                        <h2 class="hero__title">
+                            コーディングのことなら
+                            <br />
+                            おまかせください！
+                        </h2>
+                        <p class="hero__sub-title">親切・丁寧を大切にしている</p>
+                        <p class="hero__description">愛知のWebコーダーです。</p>
+                    </div>
+                    <div class="hero__image">
+                        <img src="./assets/img/logo-icon07マッチョ.png" alt="ヒーローイメージ" />
+                    </div>
+                    <div class="hero__button">
+                        <a href="#contact" class="button">お問い合わせはこちら</a>
+                    </div>
+                </div>
+            </div>
+
+            <section id="news" class="news section">
+                <div class="news__inner inner">
+                    <div class="news__title">
+                        <div class="heading">
+                            <p class="heading__sub">NEWS</p>
+                            <h2 class="heading__title">お知らせ</h2>
+                        </div>
+                    </div>
+                    <div class="news__content">
+                        <ul class="news__list">
+                            <li class="news__item">
+                                <a href="" class="news__link">
+                                    <time class="news__date" datetime="2023-03-01">2023年3月1日</time>
+                                    <div class="news__item-title">お知らせのタイトルが入ります</div>
+                                </a>
+                            </li>
+                            <li class="news__item">
+                                <a href="" class="news__link">
+                                    <time class="news__date" datetime="2023-03-01">2023年3月1日</time>
+                                    <div class="news__item-title">お知らせのタイトルが入ります</div>
+                                </a>
+                            </li>
+                            <li class="news__item">
+                                <a href="" class="news__link">
+                                    <time class="news__date" datetime="2023-03-01">2023年3月1日</time>
+                                    <div class="news__item-title">お知らせのタイトルが入ります</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="news__more">
+                            <a href="" class="news__more-link">もっと見る</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="works" class="works section">
+                <div class="works__inner inner">
+                    <div class="works__title">
+                        <div class="heading">
+                            <p class="heading__sub">work</p>
+                            <h2 class="heading__title">制作実績</h2>
+                        </div>
+                    </div>
+                    <div class="works__content">
+                        <!-- ラジオを先に置く（見た目はCSSで隠す） -->
+                        <input type="radio" name="works" id="tab-all" class="visually-hidden" checked />
+                        <input type="radio" name="works" id="tab-wp" class="visually-hidden" />
+                        <input type="radio" name="works" id="tab-coding" class="visually-hidden" />
+                        <div class="works__tabs" role="tablist">
+                            <label class="works__tab" for="tab-all">全て</label>
+                            <label class="works__tab" for="tab-wp">WordPress</label>
+                            <label class="works__tab" for="tab-coding">コーディング</label>
+                            <label class="works__tab" for="tab-design">デザイン</label>
+                        </div>
+                        <ul class="works__grid">
+                            <li class="work-card is-wp is-coding">
+                                <a href="#">
+                                    <div class="work-card__thumb">
+                                        <div class="work-card__pan">
+                                            <img src="./assets/img/work-card01.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="work-card__title">
+                                        <h3 class="work-card__company">人材会社サイト（架空）</h3>
+                                        <p class="work-card__description">
+                                            <span class="work-card__label">担当：</span>
+                                            <span class="work-card__text">コーディング　WP</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="work-card is-coding">
+                                <a href="#">
+                                    <div class="work-card__thumb">
+                                        <div class="work-card__pan">
+                                            <img src="./assets/img/work-card02.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="work-card__title">
+                                        <h3 class="work-card__company">観光サイトのLP（架空）</h3>
+                                        <p class="work-card__description">
+                                            <span class="work-card__label">担当：</span>
+                                            <span class="work-card__text">コーディング</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="work-card is-coding">
+                                <a href="#">
+                                    <div class="work-card__thumb">
+                                        <div class="work-card__pan">
+                                            <img src="./assets/img/work-card03.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="work-card__title">
+                                        <h3 class="work-card__company">アクセサリーショップのLP （架空）</h3>
+                                        <p class="work-card__description">
+                                            <span class="work-card__label">担当：</span>
+                                            <span class="work-card__text">コーディング</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="about" class="about section">
+                <div class="about__inner inner">
+                    <div class="about__title">
+                        <div class="heading">
+                            <p class="heading__sub">about</p>
+                            <h2 class="heading__title">私について</h2>
+                        </div>
+                    </div>
+
+                    <div class="about__content">
+                        <div class="about__skills">
+                            <h2 class="about__skills-title">スキル一覧</h2>
+                            <ul class="about__skills-list">
+                                <li class="skill skill--html">
+                                    <i class="skill__icon fab fa-html5"></i>
+                                    <span class="skill__text">HTML / CSS</span>
+                                </li>
+                                <li class="skill skill--css">
+                                    <i class="skill__icon fab fa-sass"></i>
+                                    <span class="skill__text">SCSS（BEM設計）</span>
+                                </li>
+                                <li class="skill skill--js">
+                                    <i class="skill__icon fab fa-js-square"></i>
+                                    <span class="skill__text">JavaScript / jQuery</span>
+                                </li>
+                                <li class="skill skill--wordpress">
+                                    <i class="skill__icon fab fa-wordpress"></i>
+                                    <span class="skill__text">WordPress</span>
+                                </li>
+                                <li class="skill skill--git">
+                                    <i class="skill__icon fab fa-git-alt"></i>
+                                    <span class="skill__text">Git / Sourcetree によるバージョン管理</span>
+                                </li>
+                                <li class="skill skill--design">
+                                    <i class="skill__icon fas fa-palette"></i>
+                                    <span class="skill__text">対応可能形式：Figma / XD / PDF / AI / PS</span>
+                                </li>
+                                <li class="skill skill--delivery">
+                                    <i class="skill__icon fas fa-shipping-fast"></i>
+                                    <span class="skill__text">納品形式：HTML＋CSS / GitHub / Zip</span>
+                                </li>
+                                <li class="skill skill--availability">
+                                    <i class="skill__icon fas fa-clock" aria-hidden="true"></i>
+                                    <span class="skill__text">週あたりの対応可能時間： 平均20時間</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="about__profile">
+                            <div class="about__profile-header">
+                                <div class="about__profile-avatar">
+                                    <img src="./assets/img/冨田和雅.JPG" alt="" />
+                                </div>
+                                <h2 class="about__profile-title">TOMITA-WEB<br>冨田　和雅</h2>
+                            </div>
+                            <div class="about__profile-story">
+                                <p>
+                                    愛知県を拠点に活動するWebコーダーの
+                                    <strong>あさひ</strong>
+                                    です。
+                                    <br />
+                                    デザインカンプの
+                                    <strong>正確な再現</strong>
+                                    と、読みやすく保守しやすい
+                                    <strong>BEM＋SCSS設計</strong>
+                                    が得意です。
+                                    <br />
+                                    <strong>2022年からWeb制作の勉強を開始</strong>
+                                    し、会社員と並行しながら取り組んでいます。
+                                </p>
+
+                                <p>
+                                    デザインカンプからのコーディング全般。対応フォーマットは
+                                    Figma／XD／PDF／Illustrator／Photoshopになります。
+                                    <br />
+                                    <strong>SEOを意識したマークアップ</strong>
+                                    、 HTML／CSS（SCSS）BEM設計でのページ構築、
+                                    <strong>レスポンシブ設計</strong>
+                                    、軽量なアニメーション、
+                                    <strong>JavaScript／jQueryの実装</strong>
+                                    、画像最適化など、
+                                    <strong>表示速度</strong>
+                                    の最適化をします。
+                                </p>
+
+                                <p>
+                                    WordPressでは
+                                    <strong>オリジナルテーマ構築</strong>
+                                    や
+                                    <strong>既存テーマのカスタマイズ</strong>
+                                    、
+                                    <strong>カスタム投稿</strong>
+                                    、
+                                    <strong>ACFでの編集画面設計</strong>
+                                    など対応可能です。
+                                    <br />
+                                    稼働は
+                                    <strong>平日夜・土日中心／週あたり平均20時間</strong>
+                                    です。
+                                    <br />
+                                    <strong>1ページのテスト発注</strong>
+                                    からでも大歓迎です。
+                                    <br />
+                                    まずはお気軽にご相談ください。
+                                </p>
+                                <!-- <div class="about__button">
+                                    <a href="#contact" class="button">お問い合わせ</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="parallax js-parallax">
+                <div class="parallax__bg"></div>
+                <div class="parallax__button">
+                    <a href="#contact" class="button">お問い合わせはこちら</a>
+                </div>
+            </div>
+            <section id="order-flow" class="order-flow section">
+                <div class="order-flow__inner inner">
+                    <div class="heading">
+                        <p class="heading__sub">flow</p>
+                        <h2 class="heading__title">ご依頼の流れ</h2>
+                    </div>
+                    <div class="order-flow__steps">
+                        <div class="order-flow__step">
+                            <div class="order-flow__step-header">
+                                <div class="order-flow__step-icon">
+                                    <i class="fas fa-comments order-flow__step-icon"></i>
+                                </div>
+                                <h3 class="order-flow__step-title">
+                                    <span>①</span>
+                                    お問い合わせ
+                                </h3>
+                            </div>
+                            <div class="order-flow__step-content">
+                                まずは、ご希望の内容・納期・ご予算感などをお伺いします。
+                                <br />
+                                チャットやメールなど、やりやすい方法で進めさせていただきます。
+                            </div>
+                        </div>
+
+                        <div class="order-flow__step">
+                            <div class="order-flow__step-header">
+                                <div class="order-flow__step-icon">
+                                    <i class="fas fa-desktop order-flow__step-icon"></i>
+                                </div>
+                                <h3 class="order-flow__step-title">
+                                    <span>②</span>
+                                    デザインカンプ確認
+                                </h3>
+                            </div>
+                            <div class="order-flow__step-content">
+                                PC・スマホ・タブレットなど、対応デバイスの種類、
+                                <br />
+                                アニメーションの有無、共通パーツの構成などを確認します。
+                                <br />
+                                不明点があれば、こちらから確認させていただきます。
+                            </div>
+                        </div>
+
+                        <div class="order-flow__step">
+                            <div class="order-flow__step-header">
+                                <div class="order-flow__step-icon">
+                                    <i class="fas fa-calculator order-flow__step-icon"></i>
+                                </div>
+                                <h3 class="order-flow__step-title">
+                                    <span>③</span>
+                                    お見積もり・納期のご提案
+                                </h3>
+                            </div>
+                            <div class="order-flow__step-content">
+                                確認内容をもとに、作業内容に応じたお見積もりと納期をご提示します。
+                                <br />
+                                内容にご納得いただけましたら、着手前に
+                                <span class="order-flow__step-highlight">料金の50%を「着手金」としてお預かり</span>
+                                いたします。
+                            </div>
+                        </div>
+
+                        <div class="order-flow__step">
+                            <div class="order-flow__step-header">
+                                <div class="order-flow__step-icon">
+                                    <i class="fas fa-code order-flow__step-icon"></i>
+                                </div>
+                                <h3 class="order-flow__step-title">
+                                    <span>④</span>
+                                    コーディング
+                                </h3>
+                            </div>
+                            <div class="order-flow__step-content">
+                                着手金のご入金確認後、コーディング作業に入らせていただきます。
+                                <br />
+                                BEM設計＋SCSSによる、保守性の高いコーディングを心がけています。
+                            </div>
+                        </div>
+
+                        <div class="order-flow__step">
+                            <div class="order-flow__step-header">
+                                <div class="order-flow__step-icon">
+                                    <i class="fas fa-search order-flow__step-icon"></i>
+                                </div>
+                                <h3 class="order-flow__step-title">
+                                    <span>⑤</span>
+                                    品質チェック
+                                </h3>
+                            </div>
+                            <div class="order-flow__step-content">
+                                スマートフォン、タブレット、PCなど複数デバイスにて動作とデザインを細かくチェックし、
+                                <br />
+                                ご確認前にしっかり整えます。
+                            </div>
+                        </div>
+
+                        <div class="order-flow__step">
+                            <div class="order-flow__step-header">
+                                <div class="order-flow__step-icon">
+                                    <i class="fas fa-eye order-flow__step-icon"></i>
+                                </div>
+                                <h3 class="order-flow__step-title">
+                                    <span>⑥</span>
+                                    ご確認
+                                </h3>
+                            </div>
+                            <div class="order-flow__step-content">
+                                表示・挙動をご確認いただき、必要であれば修正対応もいたします。
+                            </div>
+                        </div>
+
+                        <div class="order-flow__step">
+                            <div class="order-flow__step-header">
+                                <div class="order-flow__step-icon">
+                                    <i class="fas fa-credit-card order-flow__step-icon"></i>
+                                </div>
+                                <h3 class="order-flow__step-title">
+                                    <span>⑦</span>
+                                    残金お支払い
+                                </h3>
+                            </div>
+                            <div class="order-flow__step-content">
+                                最終確認が完了しましたら、
+                                <span class="order-flow__step-highlight">残額50%をご入金いただきます</span>
+                                。
+                                <br />
+                                ご入金確認後に領収書を発行いたします。
+                            </div>
+                        </div>
+
+                        <div class="order-flow__step">
+                            <div class="order-flow__step-header">
+                                <div class="order-flow__step-icon">
+                                    <i class="fas fa-download order-flow__step-icon"></i>
+                                </div>
+                                <h3 class="order-flow__step-title">
+                                    <span>⑧</span>
+                                    納品
+                                </h3>
+                            </div>
+                            <div class="order-flow__step-content">
+                                ご入金確認後、GitHubやZIPファイルなど、 ご希望の形式で納品し、すべて完了となります。
+                            </div>
+                        </div>
+
+                        <div class="order-flow__step">
+                            <div class="order-flow__step-header">
+                                <div class="order-flow__step-icon">
+                                    <i class="fas fa-tools order-flow__step-icon"></i>
+                                </div>
+                                <h3 class="order-flow__step-title">修正対応について</h3>
+                            </div>
+                            <div class="order-flow__step-content">
+                                納品後14日以内の
+                                <span class="order-flow__step-highlight">軽微な修正は無料</span>
+                                で対応いたします。
+                                <br />
+                                ただし、
+                                <span class="order-flow__step-highlight">大幅なレイアウト変更や仕様追加</span>
+                                がある場合は、
+                                <br />
+                                別途ご相談・お見積もりの上での対応とさせていただきます。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="order-flow__button">
+                        <a href="#" class="button">お見積もり依頼する</a>
+                    </div> -->
+                </div>
+            </section>
+            <section id="contact" class="contact section">
+                <div class="contact__inner inner">
+                    <p class="contact__intro"></p>
+                    <div class="contact__title">
+                        <div class="heading">
+                            <p class="heading__sub">mail</p>
+                            <h2 class="heading__title">お問い合わせ</h2>
+                        </div>
+                    </div>
+                    <form action="" method="post" class="contact__form form" novalidate>
+                        <!-- お名前 -->
+                        <div class="form__group">
+                            <label for="name" class="form__label">
+                                お名前
+                                <span class="form__required">必須</span>
+                            </label>
+                            <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                class="form__input"
+                                placeholder="例）山田　太郎"
+                                required
+                            />
+                        </div>
+
+                        <!-- フリガナ -->
+                        <div class="form__group">
+                            <label for="kana" class="form__label">
+                                お名前（フリガナ）
+                                <span class="form__required">必須</span>
+                            </label>
+                            <input
+                                id="kana"
+                                name="kana"
+                                type="text"
+                                class="form__input"
+                                placeholder="例）やまだ　たろう"
+                                required
+                            />
+                        </div>
+
+                        <!-- 電話番号 -->
+                        <div class="form__group">
+                            <label for="tel" class="form__label">
+                                電話番号
+                                <span class="form__optional">任意</span>
+                            </label>
+                            <input
+                                id="tel"
+                                name="tel"
+                                type="tel"
+                                class="form__input"
+                                inputmode="tel"
+                                placeholder="例）0312345678"
+                            />
+                        </div>
+
+                        <!-- メール -->
+                        <div class="form__group">
+                            <label for="email" class="form__label">
+                                メールアドレス
+                                <span class="form__required">必須</span>
+                            </label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                class="form__input"
+                                placeholder="例）info@example.com"
+                                required
+                            />
+                        </div>
+
+                        <!-- ご用件 -->
+                        <div class="form__group">
+                            <label for="topic" class="form__label">
+                                ご用件
+                                <span class="form__required">必須</span>
+                            </label>
+                            <div class="form__select">
+                                <select id="topic" name="topic" class="form__select-input" required>
+                                    <option value="" selected disabled>ご選択ください</option>
+                                    <option value="estimate">お見積もり依頼する</option>
+                                    <option value="apply">お申し込み</option>
+                                    <option value="question">ご質問</option>
+                                    <option value="other">その他</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- 添付ファイル -->
+                        <div class="form__group form__group--file">
+                            <label for="attachment" class="form__label">
+                                添付ファイル
+                                <span class="form__optional">任意</span>
+                            </label>
+                            <input
+                                id="attachment"
+                                name="attachment"
+                                type="file"
+                                class="form__file-input"
+                                accept=".pdf,.jpg,.jpeg,.png,.zip,.ai,.psd,.fig,.xd"
+                                aria-describedby="attachmentHint"
+                            />
+                            <p id="attachmentHint" class="form__hint">
+                                対応形式: PDF/JPG/PNG/ZIP/AI/PSD/FIG/XD ・ 最大10MB
+                            </p>
+                        </div>
+
+                        <!-- ご用件の詳細 -->
+                        <div class="form__group">
+                            <label for="message" class="form__label">
+                                ご用件の詳細
+                                <span class="form__required">必須</span>
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                class="form__textarea"
+                                rows="6"
+                                placeholder="ご自由にご記入ください。"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- 同意チェック -->
+                        <div class="form__agree">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="agree" class="form__checkbox-input" required />
+                                <span class="form__checkbox-label">お間違いがなければ、チェックを入れてください。</span>
+                            </label>
+                        </div>
+
+                        <!-- 送信 -->
+                        <div class="form__actions">
+                            <button type="submit" class="form__submit">
+                                <span class="button">送　信</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <a href="#" class="footer__logo-link">Tomita-Web</a>
+                </div>
+                <!-- <address class="footer__address">
+                    〒999-9999　愛知県<br />
+                    TEL　00-123-4567<br />
+                    FAX　00-123-4568
+                </address> -->
+                <div class="footer__copy">&copy;2025 Tomita-Web. All Rights Reserved.</div>
+            </div>
+            <div class="footer__pagetop">
+                <a href="#top" class="footer__page-top-link" aria-label="ページトップに戻る"></a>
+            </div>
+        </footer>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>

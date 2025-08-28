@@ -1,0 +1,20 @@
+$font-family-ja: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "メイリオ", "ＭＳ Ｐゴシック", sans-serif;
+$font-family-en: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-h1: "Bebas Neue", sans-serif;
+
+$font-size-base: 16px;
+$line-height-base: 1.6;
+$line-height-heading: 1.21;
+
+$color-text: #333;
+$color-text-white: #fff;
+
+$color-main1: #007acc;
+$color-main2: #f0f8ff;
+$color-accent1: #F6AB36;
+$color-accent2: #f5f5f5;
+
+$width-inner: 1100px;
+// scss用画像パス
+$theme-name: 'Asahi-Portforio';
+$img-path: '/wp-content/themes/#{$theme-name}';

@@ -1,0 +1,100 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/breakpoint' as *; 
+
+// -----------------------------------------
+// footer
+// -----------------------------------------
+.footer {
+    position: relative;
+    background: $color-main1;
+}
+.footer__info {
+    padding: 20px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 6px;
+}
+
+.footer__logo {
+    text-align: center;
+}
+
+.footer__logo-link {
+    display: inline-block;
+    padding: 0 min(60px,calc(100vw * 60 / 375));
+    font-family: $font-family-h1;
+    font-size: min(40px,calc(100vw * 40 / 375));
+    background: linear-gradient(90deg, #ffcc00 0%, #ff8c00 50%, #ff6f91 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    line-height: $line-height-heading;
+    position: relative;
+
+    @include mq('lg') {
+        padding: 0 84px;
+        font-size: 54px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 29%;
+        transform: translateY(-50%);
+        width: min(60px,calc(100vw * 60 / 375));
+        height: 60px;
+        background: url('../img/logo-icon.png') no-repeat center center;
+        background-size: contain;
+
+        @include mq('lg') {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+
+// .footer__address {
+//     margin-top: 24px;
+//     font-style: normal;
+//     color: #fff;
+//     width: fit-content;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+.footer__copy {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+
+    @include mq("md") {
+        font-size: 14px;
+    }
+}
+
+.footer__page-top-link {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    bottom: 20px;
+    background: url("../img/to-top-icon.svg") no-repeat center
+        center;
+    background-size: contain;
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+        opacity: 0.7;
+    }
+
+    @include mq("md") {
+        right: 20px;
+        bottom: 38px;
+    }
+}

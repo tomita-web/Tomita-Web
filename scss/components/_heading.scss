@@ -1,0 +1,111 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/breakpoint' as *;
+
+/* ===== Theme vars ===== */
+:root {
+  --heading-accent: #f6ab36;      /* メインアクセント */
+  --heading-accent-2: #ff8a1e;    /* 深めのオレンジ */
+  --heading-fg: #333;          /* タイトル色（濃いめ） */
+  --heading-sub: #4b5563;         /* サブ色（コントラスト強化） */
+}
+
+/* ===== Wrapper ===== */
+.heading {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 880px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.heading__sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 4px;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--heading-sub);
+  position: relative;
+  @include mq(md) {
+    gap: 18px;
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+}
+
+.heading__sub::before,
+.heading__sub::after {
+  content: '';
+  width: 56px;
+  height: 2px;
+  /* fallback → 次の行が未対応でもこの色は残る */
+  background: var(--heading-accent);
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--heading-accent), white 20%),
+    var(--heading-accent-2)
+  );
+  @include mq(md) {
+    width: 90px;
+    height: 3px;
+  }
+}
+
+.heading__title {
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--heading-fg);
+  font-size: clamp(24px, 5.2vw, 44px);
+  position: relative;
+  padding-inline: 0.12em;
+  padding-bottom: 16px;
+
+  @include mq(md) {
+    padding-bottom: 24px;
+  }
+}
+
+/* 下線（常時表示・グラデ＋グロー、fallback付き） */
+.heading__title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 2px;
+  border-radius: 999px;
+  /* fallback → 次行未対応なら単色 */
+  background: var(--heading-accent);
+  background: linear-gradient(90deg, var(--heading-accent), var(--heading-accent-2));
+  /* グロー：rgbaで安定表示（color-mixの代替） */
+  box-shadow: 0 4px 16px rgba(246, 171, 54, 0.45);
+
+  @include mq(md) {
+    width: 273px;
+    height: 3px;
+  }
+}
+
+/* タイトル縁の“空気感”（控えめ） */
+.heading__title::before {
+  content: '';
+  position: absolute;
+  inset: -6px -10px auto;
+  height: 70%;
+  border-radius: 16px;
+  background:
+    radial-gradient(60% 80% at 50% 100%,
+      rgba(246, 171, 54, 0.15) 0%,
+      transparent 70%);
+  pointer-events: none;
+  opacity: 0.35;           /* 明るい背景でにじみ過ぎないように */
+  filter: blur(10px);
+}

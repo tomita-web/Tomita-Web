@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoint" as *;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px; // デフォルトは72px下げる
+
+  @include mq(md) {
+      scroll-padding-top: 101px;
+  }
+}
+
+body {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $color-text;
+    font-family: $font-family-ja;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.is-fixed {
+    overflow: hidden;
+    height: 100%;
+}
+
+.inner {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include mq("md") {
+        padding-left: 30px;
+        padding-right: 30px;
+        max-width: calc($width-inner + 30px * 2);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.section {
+    padding: 60px 0;
+
+    @include mq(md) {
+        padding: 120px 0;
+    }
+}
+

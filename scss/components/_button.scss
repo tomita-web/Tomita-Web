@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/breakpoint' as *;
+
+.button {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #007acc 0%, #005f99 100%);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 122, 204, 0.3);
+    min-width: 200px;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    @include mq(md) {
+        font-size: 24px;
+        width: 400px;
+    }
+}
+
+
+
+/* 疑似要素で光のスライドエフェクト */
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    transform: skewX(-25deg);
+}
+
+/* ホバーアニメーション */
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 122, 204, 0.4);
+}
+
+.button:hover::before {
+    animation: shine 0.8s forwards;
+}
+
+/* 光が流れるアニメーション */
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}

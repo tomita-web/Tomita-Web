@@ -1,0 +1,26 @@
+/* assets/scss/style.scss */
+/* 1) リセット：一番最初 */
+@use 'base/reset';
+
+/* 2) 変数・mixin（@use as * で直書き可） */
+@use 'abstracts/variables' as *;
+@use 'abstracts/breakpoint' as *;
+// @use 'abstracts/mixins' as *;
+
+/* 3) base（タグの素振り・共通ルール） */
+@use 'base/base';
+
+/* 4) layout（サイト全体の骨格） */
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/contact';
+
+/* 5) components（部品） */
+@use 'components/heading';
+@use 'components/button';
+
+/* 6) utilities（小ワザ） */
+// @use 'utilities/utilities';
+
+/* 7) pages（最後にページ別で上書き） */
+@use 'pages/index';
